@@ -1,7 +1,7 @@
 import { Command, flags } from "@oclif/command";
 import * as inquirer from "inquirer";
 import cli from "cli-ux";
-import chalk from "chalk";
+import * as chalk from "chalk";
 import simulate from "./simulate";
 
 const formatter = new Intl.NumberFormat();
