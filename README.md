@@ -19,7 +19,7 @@ $ npm install -g chris-monty
 $ chris-monty COMMAND
 running command...
 $ chris-monty (-v|--version|version)
-chris-monty/0.0.0 darwin-x64 node-v14.17.0
+chris-monty/0.0.3 darwin-x64 node-v14.17.0
 $ chris-monty --help [COMMAND]
 USAGE
   $ chris-monty COMMAND
