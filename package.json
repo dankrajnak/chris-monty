@@ -1,6 +1,6 @@
 {
   "name": "chris-monty",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Daniel Krajnak @dankrajnak",
   "bin": {
     "chris-monty": "./bin/run"
@@ -49,7 +49,7 @@
   "repository": "dankrajnak/chris-monty",
   "scripts": {
     "posttest": "eslint . --ext .ts --config .eslintrc",
-    "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
+    "prepack": "rm -rf lib tsconfig.tsbuildinfo && tsc -b && oclif-dev readme",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
   },
