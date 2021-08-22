@@ -5,14 +5,14 @@ const simulate = async (
   numDoors: number,
   shouldSwitch: boolean
 ): Promise<boolean> => {
-  const doors: number[] = new Array(numDoors).fill(0).map((_, i) => i);
-  const cars = _.sampleSize(doors, numCars)!;
-
-  // Take your pick and remove it from doors;
-  const pick = _.sample(doors)!;
-  _.pullAt(doors, pick);
-
   if (shouldSwitch) {
+    const doors: number[] = new Array(numDoors).fill(0).map((_, i) => i);
+    const cars = _.sampleSize(doors, numCars)!;
+
+    // Take your pick and remove it from doors;
+    const pick = _.sample(doors)!;
+    _.pullAt(doors, pick);
+
     // shh the salesman always picks the first non car
     _.pullAt(
       doors,
@@ -20,7 +20,10 @@ const simulate = async (
     );
     return cars.includes(_.sample(doors)!);
   }
-  return cars.includes(pick);
+  const pick = _.random(1, numDoors);
+  const car = _.random(1, numDoors);
+
+  return pick === car;
 };
 
 export default simulate;

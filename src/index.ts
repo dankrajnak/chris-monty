@@ -1,7 +1,7 @@
 import { Command, flags } from "@oclif/command";
 import * as inquirer from "inquirer";
 import cli from "cli-ux";
-import * as chalk from "chalk";
+import chalk from "chalk";
 import simulate from "./simulate";
 
 const formatter = new Intl.NumberFormat();
@@ -61,7 +61,7 @@ class ChrisMonty extends Command {
       numSimulations: number;
     };
     const simpleBar = cli.progress({
-      format: `${chalk.blue("{bar}")} | {value}/{total}`,
+      format: `[${chalk.blue("{bar}")}] {percentage}% `,
     });
 
     this.log("");
@@ -98,7 +98,7 @@ class ChrisMonty extends Command {
     this.log("");
 
     if (switchWins > dontSwitchWins) {
-      this.log(chalk`{bold.green Switching won} You're goddamn right it did`);
+      this.log(chalk`{bold.green Switching won}. You're goddamn right it did`);
     } else if (dontSwitchWins > switchWins) {
       this.log(
         chalk.bold.red("Not Switching won") +

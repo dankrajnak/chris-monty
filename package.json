@@ -10,6 +10,7 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
+    "@oclif/plugin-warn-if-update-available": "^1.7.0",
     "cli-ux": "^5.6.3",
     "inquirer": "^8.1.2",
     "tslib": "^1"
@@ -40,12 +41,20 @@
   ],
   "homepage": "https://github.com/dankrajnak/chris-monty",
   "keywords": [
-    "oclif"
+    "monty hall"
   ],
   "license": "MIT",
   "main": "lib/index.js",
   "oclif": {
-    "bin": "chris-monty"
+    "bin": "chris-monty",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-warn-if-update-available"
+    ],
+    "warn-if-update-available": {
+      "timeoutInDays": 7,
+      "message": "Hey, ya goof, there's an update available (from <%= chalk.red(config.version) %> to <%= chalk.greenBright(latest) %>). Update your gosh darn software."
+    }
   },
   "repository": "dankrajnak/chris-monty",
   "scripts": {
