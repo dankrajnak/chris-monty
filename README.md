@@ -19,7 +19,7 @@ $ npm install -g chris-monty
 $ chris-monty COMMAND
 running command...
 $ chris-monty (-v|--version|version)
-chris-monty/0.0.7 darwin-x64 node-v14.17.0
+chris-monty/0.0.8 darwin-x64 node-v14.17.0
 $ chris-monty --help [COMMAND]
 USAGE
   $ chris-monty COMMAND
@@ -28,5 +28,22 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`chris-monty help [COMMAND]`](#chris-monty-help-command)
 
+## `chris-monty help [COMMAND]`
+
+display help for chris-monty
+
+```
+USAGE
+  $ chris-monty help [COMMAND]
+
+ARGUMENTS
+  COMMAND  command to show help for
+
+OPTIONS
+  --all  see all commands in CLI
+```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.3/src/commands/help.ts)_
 <!-- commandsstop -->
